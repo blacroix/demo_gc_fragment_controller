@@ -10,7 +10,13 @@ import android.view.ViewGroup;
 
 public class MainFragment extends Fragment {
 
+    private final MainController controller;
+
     private Context context;
+
+    public MainFragment() {
+        this.controller = new MainController(this);
+    }
 
     @Nullable
     @Override

@@ -15,10 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        final MainFragment fragment = new MainFragment();
-        fragment.setContext(this);
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.content, fragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content, new MainFragment()).commit();
     }
 
     @OnClick(R.id.second_activity)
